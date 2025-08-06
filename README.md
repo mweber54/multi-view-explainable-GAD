@@ -2,7 +2,6 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A comprehensive Graph Anomaly Detection pipeline with explainable AI capabilities using novel spectral learning methods and GraphSVX explanations.
 
@@ -45,39 +44,6 @@ scores = model.predict(data)
 ```bash
 # Launch Jupyter notebook for interactive analysis
 jupyter notebook notebook/exploratory_analysis.ipynb
-```
-
-## Repository Structure
-
-```
-explainable_gad/
-├── data/                    # Dataset storage and configurations
-│   ├── configs/            # Dataset configuration files
-│   ├── raw/               # Raw datasets (gitignored)
-│   └── processed/         # Processed datasets (gitignored)
-├── models/                 # Model implementations
-│   ├── models.py          # Core GAD models
-│   ├── contrastive_spectral_learning.py
-│   ├── temporal_spectral_fusion.py
-│   ├── explainable_spectral_analysis.py
-│   └── integrated_novel_pipeline.py
-├── utils/                  # Utilities and helper functions
-│   ├── config.py          # Configuration management
-│   ├── evaluation.py      # Evaluation metrics
-│   ├── graphsvx.py        # GraphSVX explainer
-│   ├── model_wrapper.py   # Model interface
-│   └── process_*.py       # Data preprocessing scripts
-├── training/               # Training scripts and pipelines
-│   └── training.py        # Main training pipeline
-├── experiments/            # Experimental validation scripts
-│   ├── main.py           # Main experiment runner
-│   └── *.py              # Specific experiment scripts
-├── tests/                  # Unit tests and validation
-│   └── test_*.py         # Test files
-├── notebook/               # Jupyter notebooks
-│   └── exploratory_analysis.ipynb
-├── requirements.txt        # Python dependencies
-└── README.md              # This file
 ```
 
 ## Performance Results
@@ -192,17 +158,6 @@ If you use this work in your research, please cite:
   note={Graph Anomaly Detection Pipeline with Spectral Learning and Shapley Value Explanations}
 }
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-- **Issues**: [GitHub Issues](https://github.com/mweber54/explainable_gad/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/mweber54/explainable_gad/discussions)
-
----
 
 **Star this repository if you find it useful!**
 
