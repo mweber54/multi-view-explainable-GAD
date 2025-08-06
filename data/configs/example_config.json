@@ -1,0 +1,46 @@
+{
+  "data": {
+    "features_path": "node_features.csv",
+    "edges_path": "edges.csv",
+    "labels_path": "node_labels.csv",
+    "static_save_path": "amazon_static.pt",
+    "embeddings_path": "embeddings.npy",
+    "standardize_features": true,
+    "include_centrality": true,
+    "include_motifs": true,
+    "include_temporal": true,
+    "betweenness_sample_k": 100
+  },
+  "model": {
+    "hidden_channels": 128,
+    "latent_dim": 64,
+    "projection_dim": 64,
+    "dropout": 0.3,
+    "num_heads": 2,
+    "classifier_hidden": 64
+  },
+  "training": {
+    "epochs_pretrain": 25,
+    "epochs_finetune": 25,
+    "learning_rate": 0.001,
+    "weight_decay": 0.00001,
+    "temperature": 0.5,
+    "edge_dropout_prob": 0.2,
+    "feature_mask_prob": 0.2,
+    "pretrain_batch_size": 1024,
+    "finetune_batch_size": 2048,
+    "eval_batch_size": 2048,
+    "num_neighbors": [10, 10],
+    "gradient_clip_norm": 1.0,
+    "save_checkpoints": true,
+    "checkpoint_dir": "checkpoints",
+    "save_every_n_epochs": 10
+  },
+  "system": {
+    "device": "auto",
+    "random_seed": 42,
+    "num_workers": 0,
+    "log_level": "INFO",
+    "log_file": "gad_pipeline.log"
+  }
+}

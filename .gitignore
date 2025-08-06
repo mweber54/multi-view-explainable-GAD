@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+notebooks/
+
+# Logs
+*.log
+evaluation_*.log
+gad_pipeline.log
+
+# Results & Outputs (keep structure but ignore content)
+results/
+checkpoints/
+outputs/
+wandb/
+explanations/
+
+# PyTorch model files
+*.pt
+*.pth
+
+# Data files (processed datasets are large)
+data/processed/
+data/raw/
+*.csv
+*.pt
+*.npy
+*.pth
+
+# Keep config files and structure
+!data/configs/
+!data/raw/.gitkeep
+
+# Temporary evaluation files
+*_evaluation_results.csv
+comprehensive_evaluation_results/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Documentation and experimental files (keep only essential docs)
+*.pdf
+*.png
+EXPERIMENTAL_*
+NOVEL_CONTRIBUTIONS_*
+PAPER_UPDATE_*
+
+# Local settings
+.claude/settings.local.json

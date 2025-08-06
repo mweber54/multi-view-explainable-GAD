@@ -1,0 +1,38 @@
+# Core Dependencies
+torch>=2.0.0
+torch-geometric>=2.3.0
+numpy>=1.21.0
+pandas>=1.5.0
+scikit-learn>=1.3.0
+
+# Deep Learning & Graph Processing
+torch-scatter>=2.1.0
+torch-sparse>=0.6.17
+torch-cluster>=1.6.1
+torch-spline-conv>=1.2.2
+
+# Visualization & Analysis
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Data Processing
+networkx>=2.8.0
+scipy>=1.9.0
+
+# Configuration & Utilities
+pyyaml>=6.0
+tqdm>=4.64.0
+colorlog>=6.7.0
+
+# Optional: Advanced Features
+# tensorboard>=2.10.0  # For training visualization
+# wandb>=0.13.0        # For experiment tracking
+# optuna>=3.0.0        # For hyperparameter optimization
+
+# Development Dependencies (optional)
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=5.0.0
+# mypy>=0.991
+# pre-commit>=2.20.0

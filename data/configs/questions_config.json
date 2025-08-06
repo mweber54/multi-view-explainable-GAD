@@ -1,0 +1,78 @@
+{
+    "data_path": "questions_static.pt",
+    "train_mask_path": "questions_processed/train_mask.csv",
+    "val_mask_path": "questions_processed/val_mask.csv", 
+    "test_mask_path": "questions_processed/test_mask.csv",
+    "num_features": 64,
+    "num_classes": 2,
+    "anomaly_detection": true,
+    "target_metric": "roc_auc",
+    "target_threshold": 0.80,
+    "description": "Stack Overflow Questions - Q&A anomaly detection",
+    
+    "model_config": {
+        "hidden_dim": 128,
+        "projection_dim": 64,
+        "num_heads": 4,
+        "dropout": 0.2,
+        "num_layers": 2
+    },
+    
+    "training_config": {
+        "epochs": 100,
+        "pretrain_epochs": 50,
+        "finetune_epochs": 50,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "patience": 20,
+        "batch_size": 1024
+    },
+    
+    "dsgad_config": {
+        "lambda_local": 0.1,
+        "lambda_global": 0.1,
+        "lambda_recon": 1.0,
+        "num_eigenvectors": 64,
+        "spectral_dropout": 0.1,
+        "fusion_dropout": 0.2
+    },
+    
+    "augmentation_config": {
+        "edge_drop_prob": 0.3,
+        "feature_drop_prob": 0.2,
+        "neighbor_completion_prob": 0.1,
+        "mask_ratio": 0.3
+    },
+    
+    "energy_config": {
+        "distance_metrics": ["euclidean", "cosine", "mahalanobis"],
+        "adaptive_threshold": true,
+        "ensemble_scoring": true,
+        "num_bootstrap_samples": 1000
+    },
+    
+    "evaluation_config": {
+        "metrics": ["roc_auc", "precision", "recall", "f1"],
+        "cross_validation_folds": 5,
+        "bootstrap_iterations": 100,
+        "confidence_interval": 0.95
+    },
+    
+    "dataset_stats": {
+        "total_nodes": 20000,
+        "total_edges": 6151306,
+        "labeled_nodes": 20000,
+        "anomaly_nodes": 11018,
+        "normal_nodes": 8982,
+        "anomaly_ratio": 0.5509,
+        "train_nodes": 12000,
+        "val_nodes": 2000,
+        "test_nodes": 6000,
+        "synthetic_data": true
+    },
+    
+    "baseline_performance": {
+        "target_auc": 0.80,
+        "expected_pipeline_auc": 0.85
+    }
+}

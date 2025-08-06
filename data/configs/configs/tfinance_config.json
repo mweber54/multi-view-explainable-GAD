@@ -1,0 +1,49 @@
+{
+  "data": {
+    "features_path": "tfinance_processed/node_features.csv",
+    "edges_path": "tfinance_processed/edges.csv",
+    "labels_path": "tfinance_processed/node_labels.csv",
+    "static_save_path": "tfinance_static.pt",
+    "embeddings_path": "tfinance_embeddings.npy",
+    "standardize_features": true,
+    "include_centrality": false,
+    "include_motifs": false,
+    "include_temporal": false,
+    "betweenness_sample_k": 100
+  },
+  "training": {
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "temperature": 0.5,
+    "edge_dropout_prob": 0.2,
+    "feature_mask_prob": 0.2,
+    "gradient_clip_norm": 1.0,
+    "save_checkpoints": true,
+    "checkpoint_dir": "checkpoints_tfinance",
+    "save_every_n_epochs": 10,
+    "epochs_pretrain": 15,
+    "epochs_finetune": 15,
+    "pretrain_batch_size": 512,
+    "finetune_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "num_neighbors": [
+      10,
+      5
+    ]
+  },
+  "system": {
+    "device": "auto",
+    "random_seed": 42,
+    "num_workers": 0,
+    "log_level": "INFO",
+    "log_file": "tfinance_pipeline.log"
+  },
+  "model": {
+    "hidden_channels": 64,
+    "latent_dim": 32,
+    "projection_dim": 32,
+    "dropout": 0.3,
+    "num_heads": 2,
+    "classifier_hidden": 32
+  }
+}
